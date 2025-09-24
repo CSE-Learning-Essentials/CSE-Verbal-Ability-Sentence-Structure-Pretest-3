@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Civil Service Exam Pretest 3 - Sentence Structure</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .answers {
+    list-style: none;
+    padding: 0;
+  }
+  .answers li {
+    margin: 5px 0;
+  }
+  .submit-btn {
+    margin-top: 20px;
+  }
+  .result {
+    margin-top: 30px;
+    padding: 15px;
+    border-top: 2px solid #ccc;
+  }
+  .correct {
+    color: green;
+    font-weight: bold;
+  }
+  .incorrect {
+    color: red;
+    font-weight: bold;
+  }
+  .explanation {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<h1>CIVIL SERVICE EXAM PRETEST 3</h1>
+<h3>CREATED BY: CSE LEARNING ESSENTIALS</h3>
+<h2>SECTION 1: VERBAL ABILITY</h2>
+<h3>PART 4: SENTENCE STRUCTURE</h3>
+<p><strong>PRACTICE TEST</strong> | <strong>10-ITEM TEST</strong> | <strong>PASSING SCORE: 8</strong></p>
+
+<p><em>Directions:</em> Choose the best sentence that follows correct grammar and proper sentence structure.</p>
+
+<form id="quiz-form">
+  <div id="questions-container"></div>
+
+  <div class="submit-btn">
+    <button type="button" onclick="submitQuiz()">Submit</button>
+  </div>
+</form>
+
+<div id="result" class="result" aria-live="polite"></div>
+
+<div id="explanation" class="explanation" style="display:none;">
+  <h3>Answer Explanations:</h3>
+  <ol>
+    <li>B – Apostrophe Misuse → "It’s" = "it is." Others misuse "its."</li>
+    <li>A – Sentence Fragments → Complete sentence. B is a fragment.</li>
+    <li>C – Degree of Comparison → "Smarter" is correct comparative.</li>
+    <li>C – Subject-Verb Agreement → "The number" = singular → "is increasing."</li>
+    <li>B – Dangling Modifier → Subject ("she") matches action.</li>
+    <li>B – Redundancy → "Returned" already means "came back."</li>
+    <li>B – Subject-Verb Agreement → "The group performs…" (singular).</li>
+    <li>B – Word Usage → Correct is "He suggested that I join…"</li>
+    <li>B – Active Voice → Clearer than passive versions.</li>
+    <li>D – Redundancy / Wordiness → "The reason… is that…" is correct.</li>
+  </ol>
+</div>
+
+<div class="social-link">
+  <p>Follow us on <a href="https://www.facebook.com/cselearningessentials/" target="_blank">Facebook</a> for more updates!</p>
+  <p>Subscribe to our YouTube Channel <a href="https://www.youtube.com/@cselearningessentialsph2023" target="_blank">here</a> for more content!</p>
+</div>
+
+<div class="advertisement">
+  <img src="images/advertisement.png" alt="Civil Service E-book" style="width: 100%; max-width: 400px; display: block; margin: 0 auto 15px auto; border-radius: 5px;">
+  <p>Avail our latest Civil Service Exam Reviewer E-books. Direct message us for more details!</p>
+</div>
+
+<script>
+  const questions = [
+    [
+      "Its raining outside, so we decided to stay indoors.",
+      "It’s raining outside, so we decided to stay indoors.",
+      "Its’ raining outside, so we decided to stay indoors.",
+      "It raining outside, so we decided to stay indoors.",
+      "It rains outside, so we decided staying indoors."
+    ],
+    [
+      "Because the teacher was late, the students waited patiently in the classroom.",
+      "Because the teacher was late. The students waited patiently in the classroom.",
+      "Because the teacher was late; the students waited patiently in the classroom.",
+      "The teacher was late, waiting patiently were the students.",
+      "The teacher late was, the students waited patiently in the classroom."
+    ],
+    [
+      "She is more smarter than her older brother.",
+      "She is the most smartest in her class.",
+      "She is smarter than her older brother.",
+      "She is smart than her older brother.",
+      "She is smarter from her older brother."
+    ],
+    [
+      "A number of students is present at the seminar.",
+      "The number of students are increasing every year.",
+      "The number of students is increasing every year.",
+      "A number of students has submitted their assignments.",
+      "A number of students was absent yesterday."
+    ],
+    [
+      "Running across the street, the bus suddenly hit her.",
+      "While running across the street, she was suddenly hit by a bus.",
+      "She was hit by the bus, running across the street suddenly.",
+      "Running across the street, a bus was suddenly hitting her.",
+      "Running across the street, suddenly hit by a bus she was."
+    ],
+    [
+      "She returned back to the office to get her wallet.",
+      "She returned to the office to get her wallet.",
+      "She went back again to the office to get her wallet.",
+      "She returned back again to the office to get her wallet.",
+      "She returned to office back to get her wallet."
+    ],
+    [
+      "The group of dancers perform gracefully every evening.",
+      "The group of dancers performs gracefully every evening.",
+      "The group of dancers are performing gracefully every evening.",
+      "The group of dancers have been performing gracefully every evening.",
+      "The group of dancers performed gracefully every evening."
+    ],
+    [
+      "He suggested me to join the English club.",
+      "He suggested that I should join the English club.",
+      "He suggested me that I join the English club.",
+      "He suggested for me to join the English club.",
+      "He suggested I to join the English club."
+    ],
+    [
+      "The report was written by the manager in a very clear way.",
+      "The manager wrote the report in a very clear way.",
+      "In a very clear way, the report was written by the manager.",
+      "The report in a very clear way was written by the manager.",
+      "Writing the report was done by the manager clearly."
+    ],
+    [
+      "The reason is because she was late to class.",
+      "The reason she was late is because of the traffic.",
+      "The reason why she was late is due to traffic.",
+      "The reason she was late is that there was heavy traffic.",
+      "The reason is being late to class because of traffic."
+    ]
+  ];
+
+  const correctAnswers = ["B","A","C","C","B","B","B","B","B","D"];
+
+  const container = document.getElementById("questions-container");
+
+  questions.forEach((choices, idx) => {
+    const qNum = idx + 1;
+    const div = document.createElement("div");
+    div.classList.add("question");
+    div.innerHTML = `<p>${qNum}. Choose the correct sentence:</p>`;
+    const ul = document.createElement("ul");
+    ul.classList.add("answers");
+
+    choices.forEach((text, i) => {
+      const li = document.createElement("li");
+      const letter = String.fromCharCode(65 + i);
+      li.innerHTML = `<label><input type="radio" name="q${qNum}" value="${letter}"> ${letter}) ${text}</label>`;
+      ul.appendChild(li);
+    });
+
+    div.appendChild(ul);
+    container.appendChild(div);
+  });
+
+  function submitQuiz() {
+    document.querySelectorAll('.correct, .incorrect').forEach(el => {
+      el.classList.remove('correct', 'incorrect');
+    });
+
+    let score = 0;
+    let resultHTML = "";
+
+    for (let i = 1; i <= 10; i++) {
+      const selected = document.querySelector(`input[name="q${i}"]:checked`);
+      if (selected) {
+        if (selected.value === correctAnswers[i-1]) {
+          selected.parentElement.classList.add("correct");
+          score++;
+          resultHTML += `<p class="correct">Q${i}: Correct</p>`;
+        } else {
+          selected.parentElement.classList.add("incorrect");
+          resultHTML += `<p class="incorrect">Q${i}: Incorrect. Correct answer: ${correctAnswers[i-1]}</p>`;
+        }
+      } else {
+        resultHTML += `<p class="incorrect">Q${i}: Not answered. Correct answer: ${correctAnswers[i-1]}</p>`;
+      }
+    }
+
+    const status = score >= 8 ? "Passed ✅" : "Failed ❌";
+    document.getElementById("result").innerHTML = `<h3>Your Score: ${score} / 10 - ${status}</h3>${resultHTML}`;
+    document.getElementById("explanation").style.display = "block";
+    document.getElementById("result").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
+</body>
+</html>
